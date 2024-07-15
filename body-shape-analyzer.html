@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Shape Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="myntra.webp" alt="Logo" class="logo">
+    </header>
+    
+    <main>
+        <div class="body-analyzer-section">
+            <h2>Analyze Your Body Shape</h2>
+            <button onclick="openFileChooser()">Upload Image</button>
+            <button onclick="openCamera()">Use Camera</button>
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="analyzeBodyShape()">
+            <video id="video" style="display: none;" width="320" height="240" autoplay></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <div id="result"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-info">
+            <span><i class="fas fa-check-circle"></i> 100% ORIGINAL PRODUCTS</span>
+            <span><i class="fas fa-undo-alt"></i> EASY RETURNS & REFUNDS</span>
+            <span><i class="fas fa-lock"></i> 100% SECURE PAYMENTS</span>
+        </div>
+    </footer>
+    <script src="body-analyzer.js"></script>
+</body>
+</html>
